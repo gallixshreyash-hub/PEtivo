@@ -1,0 +1,75 @@
+PETIVO - LIVE DEMONSTRATION ORDER
+================================
+
+1. Start MySQL.
+2. Open MySQL Workbench (or MySQL terminal) and run:
+      CREATE DATABASE IF NOT EXISTS petivo_db;
+   The project also contains backend/database.sql.
+
+3. Open the PETIVO_EXP5_FINAL folder in VS Code.
+
+4. Backend:
+   - Open a terminal in the "backend" folder.
+   - Check Java:
+        java -version
+   - Check Maven:
+        mvn -version
+   - Start:
+        mvn spring-boot:run
+
+   Backend should run at:
+        http://localhost:8080
+
+5. Frontend:
+   - Open a SECOND VS Code terminal.
+   - Go to:
+        cd petivo-frontend
+   - Install packages (first time only):
+        npm install
+   - Start:
+        npm run dev
+
+6. Open the URL shown by Vite, normally:
+        http://localhost:5173
+
+7. Login:
+   USER:
+        username = user
+        password = user123
+
+   ADMIN:
+        username = admin
+        password = admin123
+
+8. LIVE CRUD DEMONSTRATION:
+   A. CREATE
+      Click "+ Book an Appointment", fill the form, and submit.
+      The new row should appear.
+
+   B. READ
+      Refresh the page / log in again.
+      The appointment should still be present because it is stored in MySQL.
+
+   C. UPDATE
+      Click "Edit", change a value/status, then "Save Changes".
+      The row should update.
+
+   D. DELETE
+      Click "Delete" and confirm.
+      The row should disappear.
+
+9. DATABASE CHECK:
+   In MySQL Workbench:
+      USE petivo_db;
+      SELECT * FROM appointments;
+
+   The same appointment records shown in the website should appear here.
+
+IMPORTANT:
+- If "mvn" is not recognized, Maven is not installed/configured on that PC.
+- If MySQL connection fails, check the username/password in:
+      backend/src/main/resources/application.properties
+- The current default is:
+      username = root
+      password = root
+  Change it if your MySQL root password is different.

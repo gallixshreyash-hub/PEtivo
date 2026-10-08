@@ -1,0 +1,20 @@
+PETIVO LIVE DEMO CHECKLIST
+==========================
+
+[ ] MySQL is running
+[ ] petivo_db exists
+[ ] Backend starts on port 8080
+[ ] Frontend starts on port 5173
+[ ] User login works
+[ ] Admin login works
+[ ] Existing appointments load from MySQL
+[ ] Create appointment works
+[ ] Appointment remains after refresh (READ + persistence)
+[ ] Edit appointment works (UPDATE)
+[ ] Delete appointment works (DELETE)
+[ ] SELECT * FROM appointments; shows the same records in MySQL
+
+For the professor, the strongest demonstration is:
+CREATE -> show website row -> show MySQL row
+UPDATE -> change service/status -> show website/MySQL
+DELETE -> delete row -> show it is gone from MySQL
